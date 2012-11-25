@@ -76,7 +76,7 @@ let $GOROOT=golang_goroot
 let $GOPATH=substitute(expand("%:p:h"),"\\(.*\\)/src.*","\\1",'g')
 let $PATHESCAPED=substitute(expand("%:p:h"),"\/","\\\\/",'g')
 CompilerSet makeprg=cd\ %:p:h;\ $GOROOT/bin/go\ build\ 2>&1\\\|sed\ -e\ \'s\/^\\(.*\\)\.go/$PATHESCAPED\\/\\1.go\/g\'
-CompilerSet efm=%f:%l:%c:%m
+CompilerSet efm=%f:%l:%m
 
 if g:golang_onwrite
     augroup python
