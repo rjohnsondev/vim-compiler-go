@@ -4,6 +4,14 @@ Vim compiler file for Go (golang)
 Installation:
 -------------
 
+### Pathogen
+
+Just clone this repo into your bundles directory:
+
+    git clone https://github.com/rjohnsondev/vim-compiler-go.git ~/.vim/bundle/vim-compiler-go
+
+### Manual installation
+
 Drop golang.vim in ~/.vim/compiler directory.
 
 Add the following line to the autocmd section of .vimrc
