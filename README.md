@@ -4,7 +4,7 @@ Vim compiler file for Go (golang)
 Compiles Go files in the background and usefully underlines and reports
 errors to the QuickFix window:
 
-[[/demo.png]]
+![](demo.png?raw=true)
 
 Installation:
 -------------
