@@ -13,9 +13,9 @@
 "
 "      autocmd FileType go compiler golang
 "
-"   Set the g:golang_goroot variable to where your go installation can be
-"   found.  This must be an absolute path
-"  
+"   Set the $GOROOT environment variable or the g:golang_goroot Vim variable
+"   to where your go installation can be found.  This must be an absolute path
+"
 "      let g:golang_goroot = "/home/richard/go"
 "
 "   The plugin assumes a standard project layout with the files stored in a
@@ -72,7 +72,9 @@ endif
 au CursorHold <buffer> call s:GetGolangMessage()
 au CursorMoved <buffer> call s:GetGolangMessage()
 
-let $GOROOT=golang_goroot
+if exists('golang_goroot')
+  let $GOROOT=golang_goroot
+endif
 let $GOPATH=substitute(expand("%:p:h"),"\\(.*\\)/src.*","\\1",'g')
 let $PATHESCAPED=substitute(expand("%:p:h"),"\/","\\\\/",'g')
 CompilerSet makeprg=cd\ %:p:h;\ $GOROOT/bin/go\ build\ 2>&1\\\|sed\ -e\ \'s\/^\\(.*\\)\.go/$PATHESCAPED\\/\\1.go\/g\'
