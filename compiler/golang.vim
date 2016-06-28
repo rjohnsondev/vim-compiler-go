@@ -22,7 +22,7 @@
 "   src directory.  The GOPATH is set to one directory below the src folder.
 "
 " Usage:
-"   Golang is called after a buffer with Python code is saved. QuickFix
+"   Golang is called after a buffer with Golang code is saved. QuickFix
 "   window is opened to show errors, warnings and hints provided by Golang.
 "
 "   This is realized with :Golang command. To disable calling Golang every
